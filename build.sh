@@ -7,14 +7,13 @@ mkdir -p repo
 echo "failed:" > report/failed.yml
 echo "built:" > report/built.yml
 
-for package in $(cat packages); do
-  docker run -it --rm -v $(pwd)/out:/home/arch/out jankoppe/arch-aurbuild $package
-  if [ $? -ne 0 ]; then
-    echo "  - $package" >> report/failed.yml
-  else
-    echo "  - $package" >> report/built.yml
-  fi
-done
+docker run -it --rm -v $(pwd)/out:/home/arch/out jankoppe/arch-aurbuild $PACKAGE
+
+if [ $? -ne 0 ]; then
+  echo "  - $PACKAGE" >> report/failed.yml
+else
+  echo "  - $PACKAGE" >> report/built.yml
+fi
 
 
 for artefact in out/*; do

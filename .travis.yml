@@ -1,5 +1,10 @@
 sudo: required
 services: docker
-
 script:
-  - ./build.sh
+- "./build.sh"
+env:
+  - PACKAGE=pyca
+  - PACKAGE=yarn
+  - PACKAGE=libvisca
+  global:
+    secure: ladb2E9T9KJmr4xQAIvva09o5LYkKmFMP5uWo4Jzhix52FTywJRORrlKZp3ppeocpaUPUio8RgBf0IUH56sD0QnVDTEFssCsboOruzVQ/HEFSJ70PP3kmwc0kNlKS1ppqEbUxbbvdB7X6r7s9QcpmU6tfjmba23KuIXF+X0BqnXNZg6l2DEWBE1w9O7neT1urerp30cDI/ax7syPSOF6VvfPFcZwHT8Nv5uRAhSoVrKbMNdI9Ex8kUJ4zI7vo3Y28BopjzRPGyHWVleorTUF2kygA9bquYP33ZrFWKw6FMKQtBtpQtYFKFrf0RLFFCOzbInLrvh+f7fRjf0yJtat5DAWmW7cSxIrSzTHxr8xDVCkuzXK2FMxpSp7AN68MDKIMbCtsWxtpbTMvne8U4OmgSFcUMVwR2ezv7u6P+Kv/oasDzi6hUDbXJ/TTbJOnGvy7AAeBZLWtofWxzSCUSX464Wn2g+Xl8IsAE41aFGnRK5ytqNy9LMq8toz2gGC4tv+iIi61vCQTQZCArODvA2L/bTWJdmx6zd6eX22S6zPA1/sy002+Geo3X1oPgvxS+nC5xbnXcFBT2+p/hiVzEvB6kNo0eSUlxj7D1LfQqfUHly6evn5yJ/vV2Mzi1EM03U/cj8ihdq3KMqDsF47H8d0ojqHBtyvU2EEvQ1UyD7HWkg=
