@@ -1,7 +1,15 @@
+dist: trusty
 sudo: required
 services: docker
+language: python
+python:
+  - 2.7
+install:
+  - pip install j2cli
+  - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  - git lfs install
 script:
-- "./build.sh"
+  - "./build.sh"
 env:
   matrix:
     - PACKAGE=pyca
