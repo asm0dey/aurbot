@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -v
 mkdir -p out
 mkdir -p report
 mkdir -p repo
@@ -17,7 +17,7 @@ for package in $(cat packages); do
 done
 
 
-for artefact in $(ls out); do
+for artefact in out/*; do
   docker run -it --rm -v $(pwd)/out:/out -v $(pwd)/repo:/repo jankoppe/arch repo-add /repo/aurbot.db.tar.gz /out/$artefact
 done
 
