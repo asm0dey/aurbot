@@ -18,10 +18,10 @@ else
 fi
 
 # Let's clone the current state of the aurbot.github.io repository, so we can add & push the package.
-git config user.name "${GH_USER_NAME:-aurbot}"
-git config user.email "${GH_USER_EMAIL:-aurbot@jankoppe.de}"
-git clone --depth 1 --branch master "https://${GH_REF:-github.com/aurbot/aurbot.github.io}" gitrepo
+git clone --depth 1 --branch master "https://${GITHUB_TOKEN}${GITHUB_REF:-github.com/aurbot/aurbot.github.io}" gitrepo
 cd gitrepo
+git config user.name "${GITHUB_USER_NAME:-aurbot}"
+git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
 
 # build package and put into repository directory
 mkdir -p aurbot
