@@ -10,20 +10,21 @@ compare () {
   BUILT_PKGREL=$(curl -s --fail https://aurbot.github.io/meta/${1}.pkgrel)
 
   if [ "${LATEST_PKGVER}" = "${BUILT_PKGVER}" ] && [ "${LATEST_PKGREL}" = "${BUILT_PKGREL}" ]; then
-    return true
+    return 0
   else
-    false
+    return 1
   fi
 }
 
-if [ "${PACKAGE}" = "__compare__"]; then
+if [ "${PACKAGE}" = "__compare__" ]; then
   # start with empty matrix list
   cp .travis.yml.empty .travis.yml
 
   # add packages to matrix that are not up-to-date
-  while read pkg do;
+  while read pkg; do
     if compare $pkg; then
       echo "    - PACKAGE=$pkg" >> .travis.yml
+    fi
   done <packages
 
   # always add compare check to end of list
