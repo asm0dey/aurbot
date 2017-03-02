@@ -4,7 +4,7 @@ services: docker
 language: python
 python:
   - 2.7
-pre_install:
+before_install:
   - "./compare_version.sh"
 install:
   - pip install j2cli
