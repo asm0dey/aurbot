@@ -24,6 +24,7 @@ cd gitrepo
 git config user.name "${GITHUB_USER_NAME:-aurbot}"
 git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
 git lfs track '*.tar.gz'
+git lfs track '*.tar.xz'
 git lfs track 'aurbot.*'
 git lfs track
 git add .gitattributes
