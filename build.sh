@@ -14,7 +14,12 @@ git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
 
 # build package and put into repository directory
 mkdir -p aurbot
-docker run -it --rm -v $(pwd)/aurbot:/home/arch/out jankoppe/arch-aurbuild ${PACKAGE}
+docker run -it --rm\
+  -v $(pwd)/aurbot:/home/arch/out\
+  -v $(pwd)/aurbot_repo.conf:/etc/pacman.d/aurbot_repo.conf\
+  --entrypoint sh\
+  jankoppe/arch-aurbuild\
+  -c "sudo pacman -Sy; pacaur -Sm --noconfirm --noedit $PACKAGE"
 
 # rebuild repository index
 set +e
