@@ -34,6 +34,10 @@ env:
     - PACKAGE=fortune-mod-archlinux
     - PACKAGE=rar
     - PACKAGE=slack-desktop
+    - PACKAGE=brother-lpr-drivers-common # dependency of brother-lpr-drivers-laser and brother-cups-wrapper-common
+    - PACKAGE=brother-lpr-drivers-laser # dependency of brother-cups-wrapper-laser
+    - PACKAGE=brother-cups-wrapper-common # dependency of brother-cups-wrapper-laser 
+    - PACKAGE=brother-cups-wrapper-laser
     - PACKAGE=gstreamer0.10 # dependency of gstreamer0.10-base
     - PACKAGE=gstreamer0.10-base # dependency of rstudio-desktop-bin
     - PACKAGE=rstudio-desktop-bin
