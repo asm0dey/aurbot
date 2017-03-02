@@ -35,6 +35,6 @@ if [ "${PACKAGE}" = "__compare__" ]; then
   git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
   git add .travis.yml
   git commit -m "aurbot added out-of-date packages to .travis.yml"
-  git push
+  git push origin HEAD:master
   exit 0
 fi
