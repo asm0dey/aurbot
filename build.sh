@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #not really necessary, but be sure.
-if [ "${PACKAGE}" = "__compare__"]; then
+if [ "${PACKAGE}" = "__compare__" ]; then
   exit 0
 fi
 

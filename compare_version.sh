@@ -23,7 +23,7 @@ if [ "${PACKAGE}" = "__compare__" ]; then
 
   # add packages to matrix that are not up-to-date
   while read pkg; do
-    if compare $pkg; then
+    if ! compare $pkg; then
       echo "    - PACKAGE=$pkg" >> .travis.yml
     fi
   done <packages
