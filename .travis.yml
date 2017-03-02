@@ -34,6 +34,8 @@ env:
     - PACKAGE=fortune-mod-archlinux
     - PACKAGE=rar
     - PACKAGE=slack-desktop
+    - PACKAGE=python-livereload # dependency of mkdocs
+    - PACKAGE=mkdocs
     - PACKAGE=samsung-unified-driver-common # dependency of samsung-unified-driver-printer and samsung-unified-driver-scanner 
     - PACKAGE=samsung-unified-driver-printer # dependency of samsung-unified-driver
     - PACKAGE=samsung-unified-driver-scanner # dependency of samsung-unified-driver
