@@ -19,6 +19,7 @@ env:
     - PACKAGE=yarn
     - PACKAGE=libvisca
     - PACKAGE=mendeleydesktop
+    - PACKAGE=fortune-mod-archlinux
     - PACKAGE=rar
     - PACKAGE=slack-desktop
   global:
