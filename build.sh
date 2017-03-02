@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Let's clone the current state of the aurbot.github.io repository, so we can add & push the package.
-# Set up git lfs before we do anything, so that we don't blow up our repo size.
+# Set up git lfs before we do anything, so that we don't blow up our repo size. !!! git lfs does not work with github pages, skip for now.
 git clone --depth 1 --branch master "https://${GITHUB_TOKEN}@${GITHUB_REF:-github.com/aurbot/aurbot.github.io}" gitrepo
 cd gitrepo
 git config user.name "${GITHUB_USER_NAME:-aurbot}"
 git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
-git lfs track '*.tar.gz'
-git lfs track '*.tar.xz'
-git lfs track 'aurbot.*'
-git lfs track
-git add .gitattributes
+#git lfs track '*.tar.gz'
+#git lfs track '*.tar.xz'
+#git lfs track 'aurbot.*'
+#git lfs track
+#git add .gitattributes
 
 # build package and put into repository directory
 mkdir -p aurbot
