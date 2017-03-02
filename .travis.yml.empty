@@ -19,4 +19,3 @@ env:
     - GITHUB_USER_EMAIL: aurbot@jankoppe.de
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
   matrix:
-    - PACKAGE=__compare__
