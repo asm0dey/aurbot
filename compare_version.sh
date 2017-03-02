@@ -31,6 +31,8 @@ if [ "${PACKAGE}" = "__compare__" ]; then
   echo "    - PACKAGE=__compare__" >> .travis.yml
   
   # commit new .travis.yml to repo to trigger new builds.
+  git remote remove origin
+  git remote add origin "https://${AURBOT_TOKEN}@${AURBOT_REF:-github.com/aurbot/aurbot}" 
   git config user.name "${GITHUB_USER_NAME:-aurbot}"
   git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
   git add .travis.yml
