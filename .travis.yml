@@ -4,6 +4,8 @@ services: docker
 language: python
 python:
   - 2.7
+pre_install:
+  - "./compare_version.sh"
 install:
   - pip install j2cli
   - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
