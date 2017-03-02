@@ -34,3 +34,6 @@ env:
     - PACKAGE=fortune-mod-archlinux
     - PACKAGE=rar
     - PACKAGE=slack-desktop
+    - PACKAGE=gstreamer0.10 # dependency of gstreamer0.10-base
+    - PACKAGE=gstreamer0.10-base # dependency of rstudio-desktop-bin
+    - PACKAGE=rstudio-desktop-bin
