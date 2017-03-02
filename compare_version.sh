@@ -18,6 +18,7 @@ compare () {
 
 if [ "${PACKAGE}" = "__compare__" ]; then
   # start with empty matrix list
+  mv .travis.yml .travis.yml.previous
   cp .travis.yml.empty .travis.yml
 
   # add packages to matrix that are not up-to-date
@@ -30,13 +31,16 @@ if [ "${PACKAGE}" = "__compare__" ]; then
   # always add compare check to end of list
   echo "    - PACKAGE=__compare__" >> .travis.yml
   
-  # commit new .travis.yml to repo to trigger new builds.
-  git remote remove origin
-  git remote add origin "https://${AURBOT_TOKEN}@${AURBOT_REF:-github.com/aurbot/aurbot}" 
-  git config user.name "${GITHUB_USER_NAME:-aurbot}"
-  git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
-  git add .travis.yml
-  git commit -m "aurbot added out-of-date packages to .travis.yml"
-  git push origin HEAD:master
+  # only commit if .travis.yml has actually changed, otherwise don't to avoid infinite loop.
+  if ! diff -q .travis.yml .travis.yml.previous ; then
+    # commit new .travis.yml to repo to trigger new builds.
+    git remote remove origin
+    git remote add origin "https://${GITHUB_TOKEN}@${AURBOT_REF:-github.com/aurbot/aurbot}" 
+    git config user.name "${GITHUB_USER_NAME:-aurbot}"
+    git config user.email "${GITHUB_USER_EMAIL:-aurbot@jankoppe.de}"
+    git add .travis.yml
+    git commit -m "aurbot added out-of-date packages to .travis.yml"
+    git push origin HEAD:master
+  fi
   exit 0
 fi
