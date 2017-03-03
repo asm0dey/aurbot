@@ -32,7 +32,12 @@ docker run -it --rm\
   -v $(pwd)/aurbot_repo.conf:/etc/pacman.d/aurbot_repo.conf\
   --entrypoint sh\
   jankoppe/arch-aurbuild\
-  -c "sudo pacman -Sy; pacaur -Sm --noconfirm --noedit $PACKAGE"
+  -c "sudo pacman -Sy; pacaur -S --check --noconfirm --noedit $PACKAGE"
+
+if [ $? -ne 0 ]; then
+  echo "aurbot failed building $PACKAGE."
+  exit $?
+fi
 
 # rebuild repository index
 set +e
