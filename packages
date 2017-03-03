@@ -20,3 +20,7 @@ brother-cups-wrapper-laser
 gstreamer0.10
 gstreamer0.10-base
 rstudio-desktop-bin
+libexif
+libappindicator-gtk2
+google-breakpad-git
+telegram-desktop
