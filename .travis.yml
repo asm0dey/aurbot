@@ -20,7 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=brother-lpr-drivers-laser
-    - PACKAGE=brother-cups-wrapper-laser
-    - PACKAGE=rstudio-desktop-bin
     - PACKAGE=__compare__
