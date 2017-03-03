@@ -10,8 +10,10 @@ compare () {
   BUILT_PKGREL=$(curl -s --fail https://aurbot.github.io/meta/${1}.pkgrel)
 
   if [ "${LATEST_PKGVER}" = "${BUILT_PKGVER}" ] && [ "${LATEST_PKGREL}" = "${BUILT_PKGREL}" ]; then
+    echo "${1} latest is ${LATEST_PKGVER}-${LATEST_PKGREL}, have ${BUILT_PKGVER}-${BUILT_PKGREL}. All okay."
     return 0
   else
+    echo "${1} latest is ${LATEST_PKGVER}-${LATEST_PKGREL}, have ${BUILT_PKGVER}-${BUILT_PKGREL}. Needs rebuild."
     return 1
   fi
 }
