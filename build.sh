@@ -28,13 +28,13 @@ echo "I have ${PACKAGE} version ${BUILT_PKGVER}-${BUILT_PKGREL} and now will bui
 # build package and put into repository directory
 mkdir -p aurbot
 docker pull jankoppe/arch-aurbuild
-docker run -it --rm\
-  -v $(pwd)/aurbot:/home/arch/out\
-  -v $(pwd)/aurbot_repo.conf:/etc/pacman.d/aurbot_repo.conf\
-  --entrypoint sh\
-  jankoppe/arch-aurbuild\
-  -c "sudo pacman -Sy; pacaur -S --check --noconfirm --noedit $PACKAGE"\
-  & docker inspect $(docker ps -aq)
+docker run -it \
+  -v $(pwd)/aurbot:/home/arch/out \
+  -v $(pwd)/aurbot_repo.conf:/etc/pacman.d/aurbot_repo.conf \
+  --entrypoint sh \
+  jankoppe/arch-aurbuild \
+  -c "sudo pacman -Sy; pacaur -S --check --noconfirm --noedit $PACKAGE"
+docker inspect $(docker ps -aq)
 
 if [ $? -ne 0 ]; then
   echo "aurbot failed building $PACKAGE."
