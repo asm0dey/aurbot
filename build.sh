@@ -23,6 +23,8 @@ LATEST_PKGREL=$(curl -s https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=
 BUILT_PKGVER=$(curl -s --fail https://aurbot.github.io/meta/${PACKAGE}.pkgver)
 BUILT_PKGREL=$(curl -s --fail https://aurbot.github.io/meta/${PACKAGE}.pkgrel)
 
+echo "I have ${PACKAGE} version ${BUILT_PKGVER}-${BUILT_PKGREL} and now will build ${LATEST_PKGVER}-${LATEST_PKGREL}"
+
 # build package and put into repository directory
 mkdir -p aurbot
 docker run -it --rm\
