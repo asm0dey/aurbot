@@ -34,3 +34,4 @@ koel-app-git
 koel
 timg
 alsaequal
+gunicorn
