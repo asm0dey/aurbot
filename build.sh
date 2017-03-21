@@ -30,7 +30,7 @@ mkdir -p aurbot
 docker pull jankoppe/arch-aurbuild
 docker run -it \
   -v $(pwd)/aurbot:/home/arch/out \
-  -v $(pwd)/../aurbot_repo.conf:/etc/pacman.d/aurbot_repo.conf \
+  \ #-v $(pwd)/../aurbot_repo.conf:/etc/pacman.d/aurbot_repo.conf \
   --entrypoint sh \
   jankoppe/arch-aurbuild \
   -c "sudo pacman -Sy; pacaur -S --check --noconfirm --noedit $PACKAGE"
