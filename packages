@@ -36,3 +36,4 @@ timg
 alsaequal
 gunicorn
 pepper-flash
+browserpass
