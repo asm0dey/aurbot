@@ -38,3 +38,5 @@ gunicorn
 pepper-flash
 browserpass
 vivaldi
+cower
+pacaur
