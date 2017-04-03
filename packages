@@ -44,3 +44,5 @@ exa-git
 vimix-gtk-themes-git
 vimix-icon-theme
 autoenv
+govendor
+hugo
