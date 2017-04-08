@@ -20,6 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=mkdocs
-    - PACKAGE=brother-lpr-drivers-common
     - PACKAGE=__compare__
