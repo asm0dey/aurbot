@@ -20,7 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=koel
-    - PACKAGE=perl-crypt-rijndael
-    - PACKAGE=perl-file-keepass
     - PACKAGE=__compare__
