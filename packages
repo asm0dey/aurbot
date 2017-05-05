@@ -50,3 +50,5 @@ gtkd
 tilix
 spatialindex
 qgis
+perl-crypt-rijndael
+perl-file-keepass
