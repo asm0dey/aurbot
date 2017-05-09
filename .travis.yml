@@ -3,21 +3,21 @@ sudo: required
 services: docker
 language: python
 python:
-  - 2.7
+- 2.7
 script:
-  - ". ./compare_version.sh"
-  - ". ./build.sh"
+- ". ./compare_version.sh"
+- ". ./build.sh"
 branches:
   only:
-    - master
+  - master
 env:
   global:
-    - secure: ladb2E9T9KJmr4xQAIvva09o5LYkKmFMP5uWo4Jzhix52FTywJRORrlKZp3ppeocpaUPUio8RgBf0IUH56sD0QnVDTEFssCsboOruzVQ/HEFSJ70PP3kmwc0kNlKS1ppqEbUxbbvdB7X6r7s9QcpmU6tfjmba23KuIXF+X0BqnXNZg6l2DEWBE1w9O7neT1urerp30cDI/ax7syPSOF6VvfPFcZwHT8Nv5uRAhSoVrKbMNdI9Ex8kUJ4zI7vo3Y28BopjzRPGyHWVleorTUF2kygA9bquYP33ZrFWKw6FMKQtBtpQtYFKFrf0RLFFCOzbInLrvh+f7fRjf0yJtat5DAWmW7cSxIrSzTHxr8xDVCkuzXK2FMxpSp7AN68MDKIMbCtsWxtpbTMvne8U4OmgSFcUMVwR2ezv7u6P+Kv/oasDzi6hUDbXJ/TTbJOnGvy7AAeBZLWtofWxzSCUSX464Wn2g+Xl8IsAE41aFGnRK5ytqNy9LMq8toz2gGC4tv+iIi61vCQTQZCArODvA2L/bTWJdmx6zd6eX22S6zPA1/sy002+Geo3X1oPgvxS+nC5xbnXcFBT2+p/hiVzEvB6kNo0eSUlxj7D1LfQqfUHly6evn5yJ/vV2Mzi1EM03U/cj8ihdq3KMqDsF47H8d0ojqHBtyvU2EEvQ1UyD7HWkg=
-    - GITHUB_USER: aurbot-user
-    - GITHUB_REPO: git@github.com
-    - GITHUB_USER_NAME: "aurbot"
-    - GITHUB_USER_EMAIL: aurbot@jankoppe.de
-    - GITHUB_REF: github.com/aurbot/aurbot.github.io
-    - AURBOT_REF: github.com/aurbot/aurbot
+  - GITHUB_USER: aurbot-user
+  - GITHUB_REPO: git@github.com
+  - GITHUB_USER_NAME: aurbot
+  - GITHUB_USER_EMAIL: aurbot@jankoppe.de
+  - GITHUB_REF: github.com/aurbot/aurbot.github.io
+  - AURBOT_REF: github.com/aurbot/aurbot
+  - secure: L7R+AxvApKLkzQ9/lyVcasxtvbSslFf32mNlMyGIu815j41iykRMfwp6PtmqdhVD5jrYcPeEVeaqtlstssT1YYqEtZa4IGct3J8t75qk3HRKRhVaHi9XEnYa14t/JodInyML9A0mFvdZsLDsuDbsfjcTOO7cezMHgbVwAFFq+TmkAgid4+ejUkqdbfA/sv4xwGPMEjyGcNiaesWVItijUFb+P2UHSYpB8yiQJquVeq+Ad7qTKeogr2YTLZhk219QXprmwtYY1sjLE1WA4Nk30anP/YcbtlDodgSrUMFJd0WwDSCKZ8UhLa/3bbNxbZnDXuXaQ7u4grHqovSJsFzL0ozC3u0fQ1W/sDvDIUFCDPeZHqi+WuZubiCsY7XT0yz6QOWgXG38HRRQ8uuOLiQuVv4tbQBY4sR4oHq2aCoKyW9n5YBFcjk95VeiJQhbou49PCy9vSzN70K6k2Afy66jBt98Qas2NzkniC9/yM6vLcG2G52WT59tPDVYt0flZ2aE0KwYK7K1IFFGL6miNGf94WSedl6NxMIuT6nef5xC2YuQfyV7v7e3chcchMp6ak1xzB6MFyHqaCx6jlrMEqEo3+YY7gIaJgTjSGbnNT5IrbbCSOYUJ8/vsC2idWWKftusahRg4ZrfAhpbxkOlzaKr3l7Szzi0uKZIL+FBpJqptPA=
   matrix:
-    - PACKAGE=__compare__
+  - PACKAGE=__compare__
