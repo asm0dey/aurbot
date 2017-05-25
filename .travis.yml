@@ -20,14 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=slack-desktop
-    - PACKAGE=telegram-desktop
-    - PACKAGE=ulauncher
-    - PACKAGE=pepper-flash
-    - PACKAGE=browserpass
-    - PACKAGE=vivaldi
-    - PACKAGE=pacaur
-    - PACKAGE=hugo
-    - PACKAGE=gtkd
-    - PACKAGE=etcd
     - PACKAGE=__compare__
