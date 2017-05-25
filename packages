@@ -53,3 +53,4 @@ qgis
 perl-crypt-rijndael
 perl-file-keepass
 toss
+etcd
