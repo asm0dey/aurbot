@@ -54,3 +54,4 @@ perl-crypt-rijndael
 perl-file-keepass
 toss
 etcd
+caddy-full-bin
