@@ -20,8 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=mendeleydesktop
-    - PACKAGE=browserpass
-    - PACKAGE=vimix-gtk-themes-git
-    - PACKAGE=qgis
     - PACKAGE=__compare__
