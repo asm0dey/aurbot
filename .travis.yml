@@ -20,7 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=gstreamer0.10
-    - PACKAGE=gstreamer0.10-base
-    - PACKAGE=ulauncher
     - PACKAGE=__compare__
