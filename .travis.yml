@@ -20,4 +20,5 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
+    - PACKAGE=vimix-gtk-themes-git
     - PACKAGE=__compare__
