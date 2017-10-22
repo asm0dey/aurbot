@@ -55,3 +55,4 @@ perl-file-keepass
 toss
 etcd
 caddy-full-bin
+prometheus-node-exporter
