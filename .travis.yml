@@ -20,7 +20,4 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=gtkd
-    - PACKAGE=tilix
-    - PACKAGE=qgis
     - PACKAGE=__compare__
