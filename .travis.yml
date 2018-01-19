@@ -20,4 +20,7 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
+    - PACKAGE=slack-desktop
+    - PACKAGE=rstudio-desktop-bin
+    - PACKAGE=ulauncher
     - PACKAGE=__compare__
