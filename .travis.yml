@@ -21,4 +21,7 @@ env:
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
     - PACKAGE=rar
+    - PACKAGE=slack-desktop
+    - PACKAGE=ulauncher
+    - PACKAGE=vivaldi
     - PACKAGE=__compare__
