@@ -20,5 +20,8 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
-    - PACKAGE=rar
+    - PACKAGE=brother-cups-wrapper-common
+    - PACKAGE=rstudio-desktop-bin
+    - PACKAGE=gunicorn
+    - PACKAGE=exa-git
     - PACKAGE=__compare__
