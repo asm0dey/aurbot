@@ -20,4 +20,6 @@ env:
     - GITHUB_REF: github.com/aurbot/aurbot.github.io
     - AURBOT_REF: github.com/aurbot/aurbot
   matrix:
+    - PACKAGE=anki-git
+    - PACKAGE=vivaldi
     - PACKAGE=__compare__
